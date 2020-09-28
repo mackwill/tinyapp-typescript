@@ -130,7 +130,7 @@ const isValidShortUrl = (
   if (user === undefined) {
     return `Please log in to view your shortURLs`;
   }
-  let urls = urlsForUser(user.id, database);
+  const urls = urlsForUser(user.id, database);
   if (!Object.keys(urls).includes(shortURL)) {
     return "Please enter a valid shortURL.";
   }
